@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .payment-options {
+            display: flex;
+            justify-content: space-between;
+        }
+        .payment-option label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .payment-option label img {
+            margin-right: 10px;
+            width: 30px; /* Adjust size as needed */
+            height: 30px; /* Adjust size as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Details</h2>
+        <form action="#" method="post">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state" required>
+
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode" required>
+
+            <h3>Select Payment Option</h3>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <label for="paytm"><img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\paytm.jpeg"alt="Paytm Icon"> Paytm</label>
+                    <input type="radio" id="paytm" name="payment" value="paytm" required>
+                </div>
+                
+                <div class="payment-option">
+                    <label for="gpay"><img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\gpay.jpeg" alt="GPay Icon"> GPay</label>
+                    <input type="radio" id="gpay" name="payment" value="gpay" required>
+                </div>
+                <div class="payment-option">
+                    <label for="rupay"><img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\rupay.jpeg"alt="RuPay Icon"> RuPay</label>
+                    <input type="radio" id="rupay" name="payment" value="rupay" required>
+                </div>
+                <div class="payment-option">
+                    <label for="phonepay"><img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\phonepe.jpeg" alt="PhonePe Icon"> PhonePe</label>
+                    <input type="radio" id="phonepay" name="payment" value="phonepay" required>
+                </div>
+            </div>
+
+            <input type="submit" value="Proceed to Payment">
+        </form>
+    </div>
+</body>
+</html>

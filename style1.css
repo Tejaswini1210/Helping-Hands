@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+}
+
+header {
+    background-color: grey;
+    padding: 5px 20px;
+    margin-bottom: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.profile-icon img {
+    width: 40px;
+    border-radius: 80%;
+}
+
+.main-content {
+    position: relative;
+    color: #fff;
+}
+
+.background-image {
+    width: 600px;
+    background-image: url('back1.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Set your preferred height as a percentage of the viewport height */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto; /* Make sure to set left to auto when using right positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the bottom */
+    align-items: flex-end; /* Align content to the right */
+    color: black;
+    padding: 10px; /* Add padding to center content within the image */
+    border: none;
+}
+
+
+.quotes {
+    text-align:left;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}

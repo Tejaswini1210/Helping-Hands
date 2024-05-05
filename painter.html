@@ -1,0 +1,131 @@
+<!-- Painter -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Painter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .parlor-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #cec8c8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .parlor-box:hover {
+            transform: scale(1.05);
+        }
+        .parlor-image {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Make it a circle */
+        }
+        .parlor-info {
+            flex: 1;
+        }
+        .parlor-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .parlor-rating {
+            color: #2c2a2a;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+
+        }
+        .parlor-price {
+            font-size: 18px;
+            font-weight: normal;
+            font-style: italic;
+        }
+        .book-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .star-rating {
+            color: #060604;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Existing service 1 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('painter1.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Rajesh Dube</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★☆☆</span> 3.5
+                </div>
+                <div class="parlor-price"><b>Price:</b> Depends on work</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+
+        <!-- Existing service 2 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('beauty2.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Mayank</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★★★</span> 5
+                </div>
+                <div class="parlor-price"><b>Price:</b> Depends on work</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+
+        <!-- New service 3 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('beauty1.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Vicky p</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★★☆</span> 4.1
+                </div>
+                <div class="parlor-price"><b>Price:</b> Depends on work</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+
+        <!-- New service 4 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('beuty4.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Steven B</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★★★</span> 5.0
+                </div>
+                <div class="parlor-price"><b>Price:</b> Depends on work</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,769 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Yantramanav', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    height: calc(100vh - 20px);
+}
+
+.container {
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header styles */
+.header {
+    display:flex;
+    background-color: #ffffff;
+    padding: 15px 0;
+    color: #ffffff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    flex-direction: row;
+}
+
+.logo {
+    margin-right: 10px; /* Add spacing between logo and website name */
+    margin-left:0px;
+}
+
+.website-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 2px;
+}
+
+.top-part {
+    font-family: 'Yantramanav', sans-serif;
+    display: block; /* Ensure each part is displayed as a block element */
+    font-size: 24px; /* Adjust the font size as needed for both parts */
+    color: #000000; /* Change the color for both parts */
+    margin-bottom: 10px;
+}
+
+.bottom-part {
+    font-family: 'Yantramanav', sans-serif;
+    display:block;
+    font-size: 24px;
+    color: #000000;
+    margin-top: -20px;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-list li {
+    flex-grow: 1; /* Allow buttons to grow and occupy equal space */
+    margin-right: 70px; /* Adjust spacing between buttons */
+}
+
+.navbar-list li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+.navbar-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align content horizontally */
+    text-decoration: none;
+    color: #333;
+    padding: 8px 0; /* Adjust vertical padding */
+    width: 100%; /* Each button occupies equal width */
+}
+
+
+.navbar-list li a:hover {
+    border-color: #ffffff; /* Darker border on hover */
+}
+
+
+/* Location Popup Styles */
+#location-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #location-popup-content {
+    text-align: center;
+  }
+  
+  #location-popup h2 {
+    margin-bottom: 10px;
+  }
+  
+  #location-popup input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  
+  #location-popup button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  #location-popup button:hover {
+    background-color: #0056b3;
+  }
+  
+  #location-popup #close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+
+
+  
+  .input_search_result {
+    padding: 10px;
+  }
+  .react-autosuggest__suggestion {
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  /* Style for the selected suggestion item */
+  .react-autosuggest__suggestion--highlighted {
+    background-color: #f0f0f0;
+  }
+  
+
+.search-input {
+    display: none; /* Initially hide the input field */
+    padding: 8px 15px;
+    margin: 0 5px;
+    color: black; /* Adjust text color as needed */
+    border: 1px solid; /* Adjust border color as needed */
+    border-radius: 45%;
+    font-size: 16px;
+}
+  
+  /* Add this CSS to style the popup */
+.popup-input {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Add styles for the input field when it's visible */
+.btn-link.active {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid;
+}
+
+.logo-icon {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between icon and text */
+}
+
+.active {
+    font-weight: bold; /* Style active link */
+}
+
+
+/* Add or update the following styles in your existing CSS */
+
+.plans-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 20px; /* Gap between plan boxes */
+}
+
+.plan {
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding around plan box */
+}
+
+.plan h3 {
+    margin-top: 0; /* Remove top margin for plan title */
+}
+
+.plan ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.plan button {
+    background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 17;
+  -moz-border-radius: 17;
+  border-radius: 17px;
+  text-shadow: 1px 1px 0px #666666;
+  font-family: Georgia;
+  color: #fffaff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+}
+
+.plan button:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #09456e);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #09456e);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #09456e);
+    background-image: -o-linear-gradient(top, #3cb0fd, #09456e);
+    background-image: linear-gradient(to bottom, #3cb0fd, #09456e);
+}
+
+
+/* Main content styles */
+.main-content {
+    background-color: #f7f7f7; /* Set a light background color */
+    padding: 10px 0; /* Add some padding for spacing */
+    text-align: center; /* Center the content */
+    font-size: medium;
+    margin-bottom: 100px;
+}
+.testimonials-img {
+    width: 40%;
+    height: 10%;
+    margin: 20px;
+  }
+  
+   .carousel-item { 
+    padding: 1% 7%; 
+  } 
+  
+  .press-logo {
+    width: 15%;
+    margin: 20px 20px 15px;
+    align-items: center;
+    padding-bottom: 3%;
+  }
+  
+  .first {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .second {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .third {
+    margin: 10px 10px 10px 10px;
+  }
+
+.content-container {
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+h1 {
+    font-size: 40px; /* Set a larger font size for the heading */
+    color: #333; /* Set the heading color */
+}
+
+p {
+    font-size: 22px; /* Set a comfortable font size for the paragraph */
+    color: #333; /* Set the paragraph text color */
+}
+
+/* Matrix container styles */
+.matrix-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.matrix-box {
+    width: 150px; /* Increased width */
+    height: 150px; /* Increased height */
+    background-color:rgb(218, 215, 215);
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 40px
+}
+
+.box-text {
+    margin-top: 10px; /* Adjusted margin */
+    text-align: center;
+    font-size: 24px; /* Increased font size */
+    color: black;
+}
+
+/* Styles for pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 40px; /* Increased padding for larger pop-up */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-height: 80%;
+    overflow-y: auto; 
+}
+
+/* Styles for services */
+.service-box {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    /* Add more styles as needed */
+}
+
+.service-box img {
+    width: 80px;
+    height: 80px;
+    /* Add more styles as needed */
+}
+
+/* Styles for overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px); /* Adjust blur intensity as needed */
+    z-index: 999;
+}
+
+/* offer-zone  */
+.offer-zone {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.offer {
+    text-align: center;
+}
+
+.offer img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+/* Service Section Styles */
+
+.service-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.service-category {
+    text-align: center;
+}
+
+.service-category h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.small-container {
+    width: 80%;
+    margin: auto;
+}
+.small-container h2{
+    text-align:center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.col-3 {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.col-3 img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-3 h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.col-4 {
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.col-4 img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-4 h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #f39c12;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+/*<!-- Single  product details -->*/
+
+.single-service{
+    margin-top: 80px;
+}
+
+.single-service .col-2 img{
+    padding: 0;
+}
+
+.single-service .col-2{
+    padding: 20px;
+}
+
+.single-service h4{
+    margin: 30px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-service select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.single-service input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+
+.single-service .col-2 > p{
+    margin-bottom: 20px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.single-service .fa{
+    color: #ff523b;
+    margin-left: 10px;
+}
+
+.single-service .col-2 h3{
+    margin-bottom: 10px;
+}
+
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/*-----------cart items details---------------*/
+
+.cart-page{
+    margin: 80px auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background:#ff523b ;
+    font-weight: normal;
+}
+td{
+    padding: 10px;
+
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+.cart-page{
+    margin: 80px auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background:#ff523b ;
+    font-weight: normal;
+}
+td{
+    padding: 10px;
+
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+
+
+
+
+/* Footer styles */
+/* Styles for footer container */
+.footer {
+    position: var(); /* Fix the footer to the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    height:60%;
+}
+.footer img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add some spacing below the logo */
+}
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 20%;
+    text-align:center;
+}
+
+/* Styles for footer columns */
+.col {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1;
+    padding: 10px;
+    text-align: center; /* Align content within columns to the left */
+}
+
+/* Styles for social media icons */
+.footer-col-4 a {
+    display: block;
+    margin-bottom: 10px; /* Adds space between icons */
+    color: #333;
+    text-decoration: none;
+}
+
+/* Styles for footer headings */
+h3 {
+    color: #333;
+}
+
+/* Styles for footer lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* Styles for copyright text */
+.copyright {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    /* Adjust other styles for smaller screens */
+}

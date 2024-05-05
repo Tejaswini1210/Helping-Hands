@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpingHands</title>
+    <link rel="stylesheet" href="HH.css">
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ae6badd0ee.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="Images\logo1 (3).png">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="Images\logo1 (3).png" width="50" height="60" alt="HelpingHands">
+                </a>
+                <div class="website-name">
+                    <span class="top-part">Helping</span>
+                    <span class="bottom-part">Hands</span>
+                </div>
+            </div>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="HH.html" class="btn-link label-medium">Home</a>
+                    </li>
+                    <li>
+                        <button id="location-button">
+                            <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome icon for location -->
+                            Enter Your Location
+                        </button>                                              
+                        <div id="location-popup">
+                            <div id="location-popup-content">
+                                <h2>Enter Your Location</h2>
+                                <!-- Current Location Button -->
+                                <button id="current-location-button">
+                                    <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome icon for location -->
+                                    Use Current Location
+                                </button>
+                                <!-- Location Input with Suggestions -->
+                                <input type="text" id="location-input" placeholder="Enter location...">
+                                <div id="suggestions"></div>
+                                <!-- Submit Button -->
+                                <button id="submit-location">Submit</button>
+                                <!-- Close Cross Icon -->
+                                <span id="close-popup" class="close">&times;</span>
+                            </div>
+                        </div>
+                                                
+                    </li>
+                    <li>
+                        <a href="search.html" class="btn-link label-medium" aria-label="Search" id="searchButton">Services</a>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Enter your search">
+                    </li>
+                    <li><a href="about.html" class="btn-link label-medium ">About Us</a></li>
+                    <li><a href="help.html" class="btn-link label-medium ">Help</a></li>
+                    <li><a href="login.html" class="btn-link label-medium" aria-label="Login">Login</a></li>
+                    <li>
+                        <a href="profile.html" class="btn-link label-medium ">
+                            <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\profile-icon.png" alt="Logo" class="logo-icon">
+                            Profile
+                        </a>
+                    </li> 
+                </ul>
+                
+            </nav>
+    </div>
+    </header>
+    
+    <main class="main-content" id="home">
+        <section id="testimonials">
+
+            <div id="testimonials-carousel" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <h1 style="color: #000000;">"Your Tasks. And Our Experts!"</h1>
+                  <p>Effortless solutions for your daily needs, bringing convenience to your doorstep.</p>
+                  <img class="testimonials-img" src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\beuty\beauty6.jpeg" alt="dog-profile" />
+                  <h5>Unlock the secret to radiant skin, captivating fragrances, and stunning makeup.  </h5>
+                    <em>Elevate your skincare routine with our premium formulations, meticulously crafted to nourish and rejuvenate your skin from within."</em>
+                </div>
+                <div class="carousel-item">
+                  <h1 style="color: #000000;" class="testimonial-text">"Your Tasks. And Our Experts!</h1>
+                  <p>Effortless solutions for your daily needs, bringing convenience to your doorstep.</p>
+                  <img class="testimonials-img" src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\carpenter\carpenter6.jpeg" alt="lady-profile">
+                  <h5>Transform your vision into reality with our expert carpentry solutions tailored to meet your unique needs. </h5>
+                    <em>Whether you're dreaming of custom-built furniture, artisanal woodwork, or intricate renovations, our team of skilled craftsmen is here to bring your ideas to life.</em>
+        
+                </div>
+                <div class="carousel-item">
+                  <h1 style="color: #000000;" class="testimonial-text">"Your Tasks. And Our Experts!"</h1>
+                  <p>Effortless solutions for your daily needs, bringing convenience to your doorstep.</p>
+                  <img class="testimonials-img" src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\electrician\electrician6.jpeg" alt="lady-profile">
+                  <h5>Empower your space with the brilliance of safe, reliable electrical solutions tailored to meet your needs. </h5>
+                    <em>From routine maintenance to complex installations, our team of skilled electricians is committed to delivering excellence in every project we undertake.</em>
+        
+                </div>
+        
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+        
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonials-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+        
+              </button>
+            </div>
+          </section>
+
+    <!-- After the matrix container, add the following code -->
+    <h2 style="margin-top: 20px;" >Our Plans</h2>
+    <div class="plans-section" style="margin-top: 20px;" >
+    <div class="plan">
+        <h3>Basic</h3>
+        <ul>
+            <li>Access to essential services</li>
+            <li>Limited support</li>
+            <li>Monthly subscription</li>
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+    <div class="plan">
+        <h3>Premium</h3>
+        <ul>
+            <li>Access to all services</li>
+            <li>Premium support</li>
+            <li>Monthly or yearly subscription</li>
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+    <div class="plan">
+        <h3>Pre-Yearly</h3>
+        <ul>
+            <li>Access to all services</li>
+            <li>Premium support</li>
+            <li>Discounted yearly subscription</li>
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+</div>
+
+
+    <div class="matrix-container" style="margin-top: 70px;" >
+        <div class="matrix-box" id="app1">
+            <img src="Images\beuty\facial.png" alt="Beauty Spa" width="90" height="90">
+            <p class="box-text">Beauty Spa</p>
+        </div>
+        <div class="matrix-box" id="app2">
+            <img src="Images\electrician\electrician.png" alt="Electrician" width="90" height="90">
+            <p class="box-text">Electrician</p>
+        </div>
+        <div class="matrix-box" id="app3">
+            <img src="Images\plumber\plumber.png" alt="Plumber" width="90" height="90">
+            <p class="box-text">Plumber</p>
+        </div>
+        <div class="matrix-box" id="app4">
+            <img src="Images\carpenter\carpenter.png" alt="Carpenter" width="90" height="90">
+            <p class="box-text">Carpenter</p>
+        </div>
+        <div class="matrix-box" id="app5">
+            <img src="Images\driver\driver.png" alt="Driver" width="90" height="90">
+            <p class="box-text">Driver</p>
+        </div>
+        <div class="matrix-box" id="app6">
+            <img src="Images\guard\guard.png" alt="Guard" width="90" height="90">
+            <p class="box-text">Guard</p>
+        </div>
+        <div class="matrix-box" id="app7">
+            <img src="Images\painter\painter.png" alt="Painter" width="90" height="90">
+            <p class="box-text">Painter</p>
+        </div>
+        <div class="matrix-box" id="app8">
+            <img src="Images\clean\sweeping.png" alt="Sweeper" width="90" height="90">
+            <p class="box-text">House Cleaner</p>
+        </div>
+        
+    </div>
+
+    <div id="popup1" class="popup">
+        <h2>Beauty Spa Services</h2>
+        <div class="service-box">
+            <h3>Facial</h3>
+            <a href="beuty.html">
+                <img src="Images\beuty\beuty1.jpg" alt="Facial">
+            </a>
+        </div>
+        <div class="service-box">
+            <h3>Massage</h3>
+            <a href="massage_page.html">
+                <img src="Images\beuty\beuty2.jpg" alt="Massage">
+            </a>
+        </div>
+        <div class="service-box">
+            <h3>Manicure</h3>
+            <a href="manicure_page.html">
+                <img src="Images\beuty\beuty3.jpg" alt="Manicure">
+            </a>
+        </div>
+        <!-- Add more service-box divs as needed -->
+    </div>
+    
+
+<!-- Pop up for Electrician -->
+<div id="popup2" class="popup">
+    <h2>Electrician</h2>
+    <div class="service-box">
+        <h3>Residential Electrician</h3>
+        <a href="electric.html">
+        <img src="Images\electrician\house_elec1.jpg" alt="Residential Electrician">
+        <img src="Images\electrician\house_elec2.jpg" alt="Residential Electrician">
+        </a>
+    </div>
+    <div class="service-box">
+        <h3>Industrial Electrician</h3>
+        <img src="Images\electrician\industrial_elec.jpg" alt="Industrial Electrician">
+    </div>
+    <div class="service-box">
+        <h3>Solar Electrician</h3>
+        <img src="Images\electrician\solar_elec.jpg" alt="Solar Electrician"> 
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Plumber related services -->
+<div id="popup3" class="popup">
+    <h2>Plumber Services</h2>
+    <div class="service-box">
+        <h3>Water Heater Installers</h3>
+        <a href="plumber.html">
+        <img src="Images\plumber\plumber1.jpg" alt="Water Heater Installers">
+    </a>
+    </div>
+    <div class="service-box">
+        <h3>Drainage Plumbers</h3>
+        <img src="Images\plumber\drainage1.jpg" alt="Drainage Plumbers">
+        <img src="Images\plumber\drainage2.jpg" alt="Drainage Plumbers">
+    </div>
+    <div class="service-box">
+        <h3>Pipefitters</h3>
+        <img src="Images\plumber\pipefilters1.jpg" alt="Pipefitters">
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Carpenter related services -->
+<div id="popup4" class="popup">
+    <h2>Carpenter Services</h2>
+    <div class="service-box">
+        <h3>Cabinetmakers</h3>
+        <img src="Images\carpenter\carpenter1.jpg" alt="Cabinetmakers">
+        <img src="Images\carpenter\carpenter2.jpg" alt="Cabinetmakers">
+    </div>
+    <div class="service-box">
+        <h3>Trim Carpenters</h3>
+        <img src="Images\carpenter\carpenter3.jpg" alt="Trim Carpenters">
+    </div>
+    <div class="service-box">
+        <h3>Joiners</h3>
+        <img src="Images\carpenter\carpenter4.jpg" alt="Joiners">
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Drivers related services -->
+<div id="popup5" class="popup">
+    <h2>Driver Services</h2>
+    <div class="service-box">
+        <h3>Personal Drivers</h3>
+        <a href="driver.html">
+        <img src="Images\driver\per_driver1.jpg" alt="Personal Drivers">
+    </a>
+    </div>
+    <div class="service-box">
+        <h3>Commercial Drivers</h3>
+        <img src="Images\driver\com_driver1.jpg" alt="Commercial Drivers">
+        <img src="Images\driver\com_driver2.jpg" alt="Commercial Drivers">
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Guard related services -->
+<div id="popup6" class="popup">
+    <h2>Guard Services</h2>
+    <div class="service-box">
+        <h3>Security Guards</h3>
+        <a href="guard.html">
+        <img src="Images\guard\sec_guard.jpg" alt="Security Guards">
+        <img src="Images\guard\sec_guard2.jpg" alt="Security Guards">
+    </a>
+    </div>
+    <div class="service-box">
+        <h3>Personal Bodyguards</h3>
+        <img src="Images\guard\per_guard2.jpg" alt="Personal Bodyguards">
+    </div>
+    
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Painter related services -->
+<div id="popup7" class="popup">
+    <h2>Painter Services</h2>
+    <div class="service-box">
+        <h3>Interior Painters</h3>
+        <a href="painter.html">
+        <img src="Images\painter\painter1.jpg" alt="Interior Painters">
+        <img src="Images\painter\painter5.jpg" alt="Interior Painters"> 
+    </a>
+    </div>
+    <div class="service-box">
+        <h3>Exterior Painters</h3>
+        <img src="/Images/painter2.jpg" alt="Exterior Painters">
+        
+    </div>
+    <div class="service-box">
+        <h3>Decorative Painters</h3>
+        <img src="Images\painter\painter2.jpg" alt="Decorative Painters">  
+    </div>
+
+    <div class="service-box">
+        <h3>Automotive Painters</h3>
+        <img src="Images\painter\Painter4.jpg" alt="Automotive Painters">  
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for House Cleaner related services -->
+<div id="popup8" class="popup">
+    <h2>House Cleaner</h2>
+    <div class="service-box">
+        <h3>General House Cleaners</h3>
+        <a href="cleaner.html">
+        <img src="helping-hands\Images\clean\bathroom_clean.jpg" alt="General House Cleaners">
+        <img src="helping-hands\Images\clean\bedroom_clean.jpg" alt="General House Cleaners">
+    </a>
+    </div>
+    <div class="service-box">
+        <h3>Deep Cleaners</h3>
+        <img src="Images\clean\deep_clean1.jpg" alt="Deep Cleaners">
+        <img src="Images\clean\deep_clean2.jpg" alt="Deep Cleaners">
+        <img src="Images\clean\deep_clean3.jpg" alt="Deep Cleaners">
+    </div>
+    
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<div class="overlay" onclick="hidePopup()"></div>
+
+    </main>
+
+<!-- Offer Zone Section -->
+<h2 style="margin-top: 20px; text-align:center;">Offer Zone</h2>
+<section class="offer-zone">
+    <div class="container">
+        <div class="offer-container">
+            <div class="offer">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\beuty\beuty1.jpg" alt="Offer 1">
+                <p>Get 20% off on all services this weekend!</p>
+            </div>
+            <div class="offer">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\beuty\beuty3.jpg" alt="Offer 2">
+                <p>Refer a friend and get $10 credit!</p>
+            </div>
+            <!-- Add more offers here -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- After the matrix container, add the following code -->
+<div class="service-section">
+        <div class="service-category">
+            <h2 class="title">Signature Services</h2>
+                <div class="small-container">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="Images\electrician\Electrician5.jpg">
+                            <h4>Electrician</h4>
+                        </div> 
+                        <div class="col-3">
+                            <img src="Images\carpenter\carpenter4.jpg">
+                            <h4>Carpenter</h4>
+                        </div>        
+                        <div class="col-3">
+                            <img src="Images\repair\Car1.jpg">
+                            <h4>Car Repairer</h4>
+                        </div>
+                    </div>
+                </div>
+        </div>    
+    </div>
+    <div class="small-container">
+        <h2>Painter</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\painter\painter5.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\painter\painter2.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\painter\painter3.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\painter\Painter4.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+        </div>
+        <div class="small-container">
+        <h2>Plumber</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\plumber\plumber2.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\plumber\plumber3.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\plumber\plumber4.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\plumber\plumber5.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+        </div>
+        <div class="small-container">
+        <h2>Carpenter</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\carpenter\carpenter1.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\carpenter\carpenter2.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\carpenter\carpenter3.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+            <div class="col-4">
+                <a href="service_details.html"><img src="Images\carpenter\carpenter4.jpg"></a>
+                <a href="service_details.html"></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>               
+            </div>
+        </div>
+        </div>
+    
+    </div>
+    
+<!-- Footer -->
+ <div class="footer">
+        <div class="container">
+            <div class="col">
+                <div class="footer-col-1">
+                    <h3>Company</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy & Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-2">
+                    <h3>For Customer</h3>
+                    <ul>
+                        <li>HH Reviews</li>
+                        <li>Services near you</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>For Employees</h3>
+                    <p>Register as Professional</p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us on</h3>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">@2024 Helping Hands all copyright are reserved</p> 
+    <!-- Load external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+

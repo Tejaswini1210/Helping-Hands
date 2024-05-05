@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpingHands</title>
+    <link rel="stylesheet" href="HH.css">
+    <style>
+        /* Reset some default styles */
+
+        main {
+            padding: 1rem;
+        }
+
+        #about {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .testimonials {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin: 1rem;
+            max-width: 400px;
+            width: calc(100% - 2rem);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial cite {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+      <header class="header" data-header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="Images\logo1 (3).png" width="50" height="60" alt="HelpingHands">
+                </a>
+                <div class="website-name">
+                    <span class="top-part">Helping</span>
+                    <span class="bottom-part">Hands</span>
+                </div>
+            </div>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="HH.html" class="btn-link label-medium">Home</a>
+                    </li>
+                    <li>
+                        <a href="location.html" class="btn-link label-medium" aria-label="location" id="searchButton">Search Location</a>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Enter your location">
+                    </li>
+                    
+                    <li>
+                        <a href="search.html" class="btn-link label-medium" aria-label="Search" id="searchButton">Search Services</a>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Enter your search">
+                    </li>
+                    <li><a href="about.html" class="btn-link label-medium ">About Us</a></li>
+                    <li><a href="help.html" class="btn-link label-medium ">Help</a></li>
+                    <li><a href="login.html" class="btn-link label-medium" aria-label="Login">Login/Sign Up</a></li>
+                    <li>
+                        <a href="profile.html" class="btn-link label-medium ">
+                            <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\Images\profile-icon.png" alt="Logo" class="logo-icon">
+                            profile
+                        </a>
+                    </li> 
+                </ul>
+            </nav>
+    </div>
+    </header>
+    </header>
+
+    <main>
+        <section id="about">
+            <!-- Your about us content -->
+            <div class="testimonials">
+                <!-- Testimonial content goes here -->
+                <div class="testimonial">
+                    <blockquote>"I was impressed by the professionalism and efficiency of the electrician who fixed the wiring issue in my home. Highly recommend their services!"</blockquote>
+                    <cite>John Doe, New York</cite>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <script src="script.js"></script>
+    </footer>
+</body>
+</html>

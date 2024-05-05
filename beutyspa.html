@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Box with Pop-up</title>
+<style>
+    /* Styles for matrix box */
+    .matrix-box {
+        position: relative;
+        cursor: pointer;
+        /* Add more styles as needed */
+    }
+
+    .box-text {
+        text-align: center;
+        /* Add more styles as needed */
+    }
+
+    /* Styles for pop-up */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 40px; /* Increased padding for larger pop-up */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        z-index: 1000;
+        height: 400px;
+        width: 300px;
+    }
+
+    /* Styles for services */
+    .service-box {
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+        /* Add more styles as needed */
+    }
+
+    .service-box img {
+        width: 80px;
+        height: 80px;
+        /* Add more styles as needed */
+    }
+
+    /* Styles for overlay */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(15px); /* Adjust blur intensity as needed */
+        z-index: 999;
+    }
+</style>
+</head>
+<body>
+
+<!-- Matrix box 1 -->
+<div class="matrix-box" data-popup-id="popup1">
+    <div class="box-text">Click for Beauty Services</div>
+</div>
+
+<!-- Matrix box 2 -->
+<div class="matrix-box" data-popup-id="popup2">
+    <div class="box-text">Click for Electrician Services</div>
+</div>
+
+<!-- Matrix box 3 -->
+<div class="matrix-box" data-popup-id="popup3">
+    <div class="box-text">Click for Chef Services</div>
+</div>
+
+<!-- Pop up for beauty related services -->
+<div id="popup1" class="popup">
+    <h2>Beauty Spa Services</h2>
+    <div class="service-box">
+        <img src="beauty1.jpg" alt="Facial">
+        <p>Facial</p>
+    </div>
+    <div class="service-box">
+        <img src="beauty2.jpg" alt="Massage">
+        <p>Massage</p>
+    </div>
+    <div class="service-box">
+        <img src="beauty3.jpg" alt="Manicure">
+        <p>Manicure</p>
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Electrician -->
+<div id="popup2" class="popup">
+    <h2>Electrician</h2>
+    <div class="service-box">
+        <img src="electrician1.jpg" alt="Facial">
+        <p>Facial</p>
+    </div>
+    <div class="service-box">
+        <img src="electrician2.jpg" alt="Massage">
+        <p>Massage</p>
+    </div>
+    <div class="service-box">
+        <img src="Electrician3.jpg" alt="Manicure">
+        <p>Manicure</p>
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<!-- Pop up for Chef related services -->
+<div id="popup3" class="popup">
+    <h2>Chef Services</h2>
+    <div class="service-box">
+        <img src="chef1.jpg" alt="Facial">
+        <p>Facial</p>
+    </div>
+    <div class="service-box">
+        <img src="chef2.jpg" alt="Massage">
+        <p>Massage</p>
+    </div>
+    <div class="service-box">
+        <img src="chef3.jpg" alt="Manicure">
+        <p>Manicure</p>
+    </div>
+    <!-- Add more service-box divs as needed -->
+</div>
+
+<div class="overlay" onclick="hidePopup()"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.matrix-box').forEach(function(box) {
+            box.addEventListener('click', function() {
+                var popupId = this.getAttribute('data-popup-id');
+                document.getElementById(popupId).style.display = 'block';
+                document.querySelector('.overlay').style.display = 'block';
+            });
+        });
+    });
+
+    function hidePopup() {
+        document.querySelectorAll('.popup').forEach(function(popup) {
+            popup.style.display = 'none';
+        });
+        document.querySelector('.overlay').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

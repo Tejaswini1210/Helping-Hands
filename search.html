@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Services</title>
+  <style>
+    /* The Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <button id="searchButton" class="btn btn-primary">Search Services</button>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" id="closeButton">&times;</span>
+      <input type="text" id="searchInput" placeholder="Search Services">
+      <ul id="servicesList">
+        <li>Beautician</li>
+        <li>Electrician</li>
+        <li>Plumber</li>
+        <li>Painter</li>
+        <li>Driver</li>
+        <li>Guard</li>
+        <li>House Keeper</li>
+        <li>Car Painter</li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <script>
+    // Get the popup element
+var popup = document.getElementById("popup");
+
+// Get the button that opens the popup
+var btn = document.getElementById("searchButton");
+
+// Get the close button
+var closeButton = document.getElementById("closeButton");
+
+// When the user clicks the button, open the popup
+btn.onclick = function() {
+  popup.style.display = "block";
+}
+
+// When the user clicks on the close button, close the popup
+closeButton.onclick = function() {
+  popup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
+
+// Additional functionality to handle the search input
+var searchInput = document.getElementById("searchInput");
+var servicesList = document.getElementById("servicesList").getElementsByTagName("li");
+
+searchInput.addEventListener("keyup", function() {
+  var searchValue = searchInput.value.toLowerCase();
+  for (var i = 0; i < servicesList.length; i++) {
+    var service = servicesList[i];
+    var serviceName = service.textContent.toLowerCase();
+    if (serviceName.indexOf(searchValue) > -1) {
+      service.style.display = "";
+    } else {
+      service.style.display = "none";
+    }
+  }
+});
+
+  </script>
+</body>
+</html>

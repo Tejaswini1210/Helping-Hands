@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Location Popup</title>
+<style>
+#location-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+#location-popup-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+#close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div id="location-popup">
+  <div id="location-popup-content">
+    <span id="close">&times;</span>
+    <h2>Get Your Location</h2>
+    <p>Allow this website to use your location to provide a better experience.</p>
+    <button id="use-current-location">Use Current Location</button>
+    <br>
+    <input type="text" id="enter-location" placeholder="Enter Location">
+    <button id="use-entered-location">Use Entered Location</button>
+  </div>
+</div>
+
+<script>
+var locationButton = document.getElementById("location-button");
+var locationPopup = document.getElementById("location-popup");
+var closeButton = document.getElementById("close");
+var useCurrentLocationButton = document.getElementById("use-current-location");
+var enterLocationInput = document.getElementById("enter-location");
+var useEnteredLocationButton = document.getElementById("use-entered-location");
+
+locationButton.addEventListener("click", function() {
+  locationPopup.style.display = "block";
+});
+
+closeButton.addEventListener("click", function() {
+  locationPopup.style.display = "none";
+});
+
+useCurrentLocationButton.addEventListener("click", function() {
+  // Add functionality to get user's current location using geolocation API
+  // For example:
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+});
+
+useEnteredLocationButton.addEventListener("click", function() {
+  // Add functionality to use the entered location
+  var enteredLocation = enterLocationInput.value;
+  //  Process the entered location
+  alert("You entered: " + enteredLocation);
+});
+
+function showPosition(position) {
+  // Get user's latitude and longitude
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  alert("Latitude: " + latitude + " Longitude: " + longitude);
+  // You can use these coordinates to process the user's location
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    default:
+      alert("An unknown error occurred.");
+  }
+}
+</script>
+
+</body>
+</html>

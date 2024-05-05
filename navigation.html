@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clickable Application Icons</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/04/Photos-pictures-minimalist-backgrounds.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            height: 100vh; /* Make the body take the full viewport height */
+            margin: 0;
+        }
+    
+        .app-icons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            justify-content: center;
+        }
+    
+        .app-icon {
+            width: 150px;
+            height: 150px; /* Set the height to make it a perfect circle */
+            text-align: center;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10%; /* Set the border-radius to 50% for a circular shape */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+        }
+        
+        
+    
+        .app-icon img {
+            width: 80px; /* Adjust the size of the image */
+            height: 80px; /* Adjust the size of the image */
+            cursor: pointer;
+        }
+        
+    
+        .app-text {
+            font-size: 16px;
+            margin-top: 10px;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="app-icons">
+        <!-- Your application icons here -->
+    </div>
+
+    <div class="app-icons">
+        
+        </div>
+        <div class="app-icons">
+            <div class="app-icon" onclick="openApp('calculator.html')">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\acapp1.png" alt="App 1">
+                <div class="app-text">AC service</div>
+            </div>
+    
+            <div class="app-icon" onclick="openApp('usb.html')">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\acapp2.jpg" alt="App 2">
+                <div class="app-text"></div>
+            </div>
+    
+            <div class="app-icon" onclick="openApp('setting.html')">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\acapp3.png" alt="App 3">
+                <div class="app-text">Configuration</div>
+            </div>
+    
+            <div class="app-icon" onclick="openApp('pdf.html')">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\acapp4.jpg" alt="App 4">
+                <div class="app-text">PDF Reader</div>
+            </div>
+    
+            <div class="app-icon" onclick="openApp('app2.html')">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\acapp5.png" alt="App 5">
+                <div class="app-text">CNC</div>
+            </div>
+    
+            <div class="app-icon" onclick="openApp('h3d.html')">
+                <img src="C:\Users\TEJSWINI\Desktop\HelpingHand\helping-hands\acapp6.jpg" alt="App 6">
+                <div class="app-text">STL</div>
+            </div>
+        
+    </div>
+
+    <script>
+        function openApp(appURL) {
+            window.location.href = appURL;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beauty Parlors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .parlor-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #cec8c8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .parlor-box:hover {
+            transform: scale(1.05);
+        }
+        .parlor-image {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Make it a circle */
+        }
+        .parlor-info {
+            flex: 1;
+        }
+        .parlor-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .parlor-rating {
+            color: #2c2a2a;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .parlor-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .book-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffc107;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .star-rating {
+            color: #fdd835;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Existing service 1 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('rupay.')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Skin and Hair</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★★☆</span> 4.2
+                </div>
+                <div class="parlor-price">Price: Starting at ₹ 1500</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+
+        <!-- Existing service 2 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('helping-hands\Images\beuty\beuty2.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Spatika Spa & Salon</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★★☆</span> 4.0
+                </div>
+                <div class="parlor-price">Price: Starting at ₹ 1200</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+
+        <!-- New service 3 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('helping-hands\Images\beuty\beuty1.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Glow & Go Beauty</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★☆☆</span> 3.5
+                </div>
+                <div class="parlor-price">Price: Starting at ₹ 1000</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+
+        <!-- New service 4 -->
+        <div class="parlor-box">
+            <div class="parlor-image" style="background-image: url('beauty4.jpg')"></div>
+            <div class="parlor-info">
+                <div class="parlor-name">Luxe Salon</div>
+                <div class="parlor-rating">
+                    Rating: <span class="star-rating">★★★★★</span> 5.0
+                </div>
+                <div class="parlor-price">Price: Starting at ₹ 2000</div>
+                <a href="#" class="book-button">Book Service</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
